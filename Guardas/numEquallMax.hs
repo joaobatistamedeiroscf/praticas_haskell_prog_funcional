@@ -1,5 +1,3 @@
-
-
 maxthree::Int-> Int ->Int -> Int 
 numequalMax::Int -> Int -> Int -> Int 
 maxthree a b c 

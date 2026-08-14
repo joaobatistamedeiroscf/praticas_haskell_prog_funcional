@@ -1,9 +1,9 @@
 venda :: Int -> Int
 venda 0 = 5
-venda 1 = 9
-venda 2 = 6
-venda 3 = 8
-venda 4 = 0 
+venda 1 = 6
+venda 2 = 4
+venda 3 = 18
+venda 4 = 2 
 venda 5 = 17
 
 {-▪Q1: Qual o total de vendas desde a semana 0 até a semana n?-}
@@ -30,8 +30,8 @@ maiorVendaDois n
 semanaMaiorVenda :: Int -> Int 
 semanaMaiorVenda n 
     |n == 0 = 0
-    |venda( semanaMaiorVenda (n - 1)) > venda n  = semanaMaiorVenda(n - 1)
-    |otherwise = n 
+    |venda( semanaMaiorVenda (n - 1)) > venda n  = semanaMaiorVenda(n-1)
+    |otherwise = n
 
 {-▪Existe alguma semana na qual nada foi vendido? -}
 nadaVendido :: Int -> Bool
@@ -40,7 +40,7 @@ nadaVendido n
     | venda n == 0 = True
     | otherwise = nadaVendido (n - 1)
 
-{-▪Em qual semana não houve vendas? (se é que houve alguma) -}
+
 semanaSemVenda :: Int -> Int 
 semanaSemVenda n 
     |n < 0 = -1
@@ -56,6 +56,7 @@ main = do
     print(semanaMaiorVenda 5)
     print(nadaVendido 3)
     print(semanaSemVenda 5)
+   
     
     
      
